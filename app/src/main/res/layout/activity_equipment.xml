@@ -1,0 +1,248 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.kim8o.g.mygymbuddy.Equipment">
+    <ImageView
+        android:id="@+id/im_eqp_barbell"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/dumbbells2"
+        />
+    <TextView
+        android:textSize="30sp"
+        android:id="@+id/txt_equipment_builder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="Available Equipment"
+        android:textColor="#829bae"
+        android:layout_below="@id/im_eqp_barbell"
+        android:layout_centerInParent="true"/>
+    <TextView
+
+        android:id="@+id/txt_avail_equipment"
+        android:layout_marginTop="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_equipment_builder"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text=" Machines"/>
+
+    <CheckBox
+        android:id="@+id/chkbx_bosu_ball"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Elliptical"
+        android:layout_below="@id/txt_avail_equipment"
+        android:textAppearance="?android:textAppearanceMedium" />
+
+    <CheckBox
+        android:id="@+id/chkbx_jumprope"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chkbx_bosu_ball"
+        android:text="Jump Rope"
+        android:textAppearance="?android:textAppearanceMedium" />
+
+    <CheckBox
+        android:id="@+id/chkbx_cross_fit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chkbx_jumprope"
+        android:text="Cross Fit"
+        android:textAppearance="?android:textAppearanceMedium" />
+
+
+    <CheckBox
+        android:id="@+id/chkbx_stability_ball"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chkbx_cross_fit"
+        android:text="Stability Ball"
+        android:textAppearance="?android:textAppearanceMedium" />
+    <CheckBox
+        android:id="@+id/abdominal_bench"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Abdominal Bench"
+        android:layout_below="@id/chkbx_stability_ball"
+        android:layout_alignParentLeft="true"
+        android:textAppearance="?android:textAppearanceMedium" />
+
+    <TextView
+
+        android:id="@+id/txt_activity"
+        android:layout_marginTop="36dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chkbx_stability_ball"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="Activities "/>
+
+    <CheckBox
+        android:id="@+id/chkbx_running"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_activity"
+        android:text="Running"
+        android:textAppearance="?android:textAppearanceMedium" />
+    <CheckBox
+        android:id="@+id/chkbx_swimming"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chkbx_running"
+        android:text="Swimming"
+        android:textAppearance="?android:textAppearanceMedium" />
+    <CheckBox
+        android:id="@+id/chkbx_biking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chkbx_swimming"
+        android:text="Biking"
+        android:textAppearance="?android:textAppearanceMedium" />
+    <CheckBox
+        android:id="@+id/squat_station"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chkbx_biking"
+        android:text="Squat Station"
+        android:textAppearance="?android:textAppearanceMedium" />
+    <CheckBox
+        android:id="@+id/bench_press"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/squat_station"
+        android:text="Bench Press"
+        android:textAppearance="?android:textAppearanceMedium" />
+
+    <CheckBox
+        android:id="@+id/hammer_strength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bench_press"
+        android:text="Hammer Strength"
+        android:textAppearance="?android:textAppearanceMedium" />
+    <CheckBox
+        android:id="@+id/pull_up_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hammer_strength"
+        android:text="Pull Up Bar"
+        android:textAppearance="?android:textAppearanceMedium" />
+    <CheckBox
+        android:id="@+id/lat_pull_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lateral Pull Down"
+        android:layout_below="@id/txt_avail_equipment"
+        android:layout_toRightOf="@id/abdominal_bench"
+        android:layout_alignParentRight="true"
+        android:textAppearance="?android:textAppearanceMedium" />
+
+    <CheckBox
+        android:id="@+id/leg_extension"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Leg Extension"
+        android:layout_below="@id/lat_pull_down"
+        android:layout_toRightOf="@id/abdominal_bench"
+        android:layout_alignParentRight="true"
+        android:textAppearance="?android:textAppearanceMedium" />
+    <CheckBox
+        android:id="@+id/leg_curl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Leg Curl Machine"
+        android:layout_below="@id/leg_extension"
+        android:layout_toRightOf="@id/abdominal_bench"
+        android:layout_alignParentRight="true"
+        android:textAppearance="?android:textAppearanceMedium" />
+    <CheckBox
+        android:id="@+id/dipping_bars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dipping Bars"
+        android:layout_below="@id/leg_curl"
+        android:layout_toRightOf="@id/abdominal_bench"
+        android:layout_alignParentRight="true"
+        android:textAppearance="?android:textAppearanceMedium" />
+    <CheckBox
+        android:id="@+id/smith_machine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Smith Machine"
+        android:layout_below="@id/dipping_bars"
+        android:layout_toRightOf="@id/abdominal_bench"
+        android:layout_alignParentRight="true"
+        android:textAppearance="?android:textAppearanceMedium" />
+    <TextView
+
+        android:id="@+id/txt_avail_crossfit"
+        android:layout_marginTop="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pull_up_bar"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="Cross Fit Workout"/>
+
+    <CheckBox
+        android:id="@+id/peck_deck_machine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Pec Deck Machine"
+        android:layout_below="@id/txt_avail_crossfit"
+        android:layout_toRightOf="@id/chkbx_bosu_ball"
+        android:layout_alignParentLeft="true"
+        android:textAppearance="?android:textAppearanceMedium" />
+
+    <CheckBox
+        android:id="@+id/kettle_bell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Kettle Bells"
+        android:layout_below="@id/peck_deck_machine"
+        android:layout_toRightOf="@id/chkbx_bosu_ball"
+        android:layout_alignParentLeft="true"
+        android:textAppearance="?android:textAppearanceMedium" />
+    <CheckBox
+        android:id="@+id/wall_ball"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  Wall Ball"
+        android:layout_below="@id/kettle_bell"
+        android:layout_toRightOf="@id/chkbx_bosu_ball"
+        android:layout_alignParentLeft="true"
+        android:textAppearance="?android:textAppearanceMedium" />
+    <CheckBox
+        android:id="@+id/stability_ball"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  Stability Ball"
+        android:layout_below="@id/wall_ball"
+        android:layout_toRightOf="@id/chkbx_bosu_ball"
+        android:layout_alignParentLeft="true"
+        android:textAppearance="?android:textAppearanceMedium" />
+    <Button
+        android:id="@+id/btn_save_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="Save"
+        android:onClick="onClickSave"/>
+
+    <Button
+        android:id="@+id/btn_back_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="Back"
+        android:onClick="onClickBack"/>
+</RelativeLayout>

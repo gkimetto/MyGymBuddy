@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kim8o.g.mygymbuddy" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/inclinebenchpress"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".Login"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".User"
+            android:label="@string/title_activity_user" >
+            <intent-filter>
+                <action android:name="com.kim8o.g.mygymbuddy.User" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Equipment"
+            android:label="@string/title_activity_equipment"
+            android:parentActivityName=".User" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.kim8o.g.mygymbuddy.User" />
+        </activity>
+        <activity
+            android:name=".DailyUpdate"
+            android:label="@string/title_activity_daily_update"
+            android:parentActivityName=".Login" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.kim8o.g.mygymbuddy.Login" />
+        </activity>
+        <activity
+            android:name=".MainPlanBuilder"
+            android:label="@string/title_activity_main_plan_builder"
+            android:parentActivityName=".DailyUpdate" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.kim8o.g.mygymbuddy.DailyUpdate" />
+        </activity>
+    </application>
+
+</manifest>
