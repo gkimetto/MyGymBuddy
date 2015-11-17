@@ -49,6 +49,18 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.kim8o.g.mygymbuddy.DailyUpdate" />
         </activity>
+        <activity
+            android:name=".DetailActivityPhone"
+            android:label="@string/title_activity_detail_activity_phone" >
+        </activity>
+        <activity
+            android:name=".DietPlanDetailFragment"
+            android:label="@string/title_activity_diet_plan_detail_fragment" >
+        </activity>
+        <activity
+            android:name=".MainDietBuilder"
+            android:label="@string/title_activity_main_diet_builder" >
+        </activity>
     </application>
 
 </manifest>

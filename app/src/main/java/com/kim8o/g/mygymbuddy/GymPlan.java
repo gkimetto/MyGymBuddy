@@ -14,14 +14,40 @@ public class GymPlan {
     //gymplans is an array of GymPlans
 
     public static final GymPlan[] gymplans ={
-            new GymPlan("Stationary Bike"," Step on stationary bike\n Set to desired speed", R.drawable.cycle),
-            new GymPlan("Abdominal Bench"," Lie on your back \n Secure your feet \n Do full range ab crunches", R.drawable.abdominalbench),
-            new GymPlan("Squat Station","S tep on Squat Station\n Start squatting while controlling breathing", R.drawable.cycle),
-            new GymPlan("Bench Press"," Choose appropriate weight\n Lie on the bench\n Proceed with bench press", R.drawable.abdominalbench),
-            new GymPlan("Lateral Pull Down"," Set appropriate weight\n Repeat reps as required", R.drawable.latpulldownmachine),
-            new GymPlan("Leg Extension"," Select weight\n Slowly extend leg as you control breathing\n Repeat", R.drawable.legextensionmachine),
-            new GymPlan("Leg Curl Machine"," Select weight\n Do 20 leg curls", R.drawable.legabductionadductionmachine),
+            new GymPlan("Stationary Bike"," Step on stationary bike\n Set to desired speed\nMuscles Used:\tLegs, Core, Shoulders, Chest", R.drawable.cycle),
+            new GymPlan("Abdominal Bench"," Lie on your back \n Secure your feet \n Do full range ab crunches\nMuscles Used:\tLegs, Core, Shoulders, Chest", R.drawable.abdominalbench),
+            new GymPlan("Squat Station","S tep on Squat Station\n Start squatting while controlling breathing\nMuscles Used:\tLegs, Core, Shoulders, Chest", R.drawable.cycle),
+            new GymPlan("Bench Press"," Choose appropriate weight\n Lie on the bench\n Proceed with bench press\n" +
+                    "Muscles Used:\tLegs, Core, Shoulders, Chest", R.drawable.abdominalbench),
+            new GymPlan("Lateral Pull Down"," Set appropriate weight\n Repeat reps as required\n" +
+                    "Muscles Used:\tLegs, Core, Shoulders, Chest", R.drawable.latpulldownmachine),
+            new GymPlan("Leg Extension"," Select weight\n Slowly extend leg as you control breathing\n Repeat\n" +
+                    "Muscles Used:\tLegs, Core, Shoulders, Chest", R.drawable.legextensionmachine),
+            new GymPlan("Leg Curl Machine"," Select weight\n Do 20 leg curls\n" +
+                    "Muscles Used:\tLegs, Core, Shoulders, Chest", R.drawable.legabductionadductionmachine),
             new GymPlan("Smith Machine"," Step on set to desired weight", R.drawable.dumbbells2),
+            new GymPlan("Incline Bench Press"," The incline bench press is another great workout for chest growth.\n" +
+                    "Muscles Used:\tLegs, Core, Shoulders, Chest", R.drawable.inclinebenchpress),
+            new GymPlan("Cables and Pulleys"," Grips are attached to cables.\n A number of exercises can be performed with this\n" +
+                    "Muscles Used:\tLegs, Core, Shoulders, Chest", R.drawable.cablesandpulleys),
+            new GymPlan("Chin Up Bar"," Pull yourself up so your chin is above the bar.\n" +
+                    "Muscles Used:\tLegs, Core, Shoulders, Chest", R.drawable.pullupbar),
+            new GymPlan("Preacher Curls"," A sitted weight lifting exercise that isolates the biceps\n" +
+                    "Muscles Used:\tLegs, Core, Shoulders, Chest", R.drawable.preachercurl),
+            new GymPlan("Hack Squat Machine"," A combination of the leg press and squat\n" +
+                    "Muscles Used:\tLegs, Core, Shoulders, Chest", R.drawable.hacksquatmachine),
+            new GymPlan("Kettle Bell"," Tons of ways you can use the kettle bell\n" +
+                    "Muscles Used:\tLegs, Core, Shoulders, Chest", R.drawable.kettlebells1),
+            new GymPlan("Wall Ball"," Throw the ball against a wall and catch it on the way down.\n" +
+                    "Muscles Used:\tLegs, Core, Shoulders, Chest", R.drawable.wallball),
+            new GymPlan("Foam Roller"," Not exactly an exercise but a good tool for reducing soreness and flexibility", R.drawable.foamroller),
+            new GymPlan("Hyper Extension Bench"," Move your upper body up and down. Weights can be held to increase the difficulty\nLower back, glutes", R.drawable.dumbbells2),
+            new GymPlan("Incline Bench Press"," The incline bench press is another great workout for chest growth.\n" +
+                    "Muscles Used:\tLegs, Core, Shoulders, Chest", R.drawable.inclinebenchpress),
+            new GymPlan("Cables and Pulleys"," Grips are attached to cables.\n A number of exercises can be performed with this\n" +
+                    "Muscles Used:\tLegs, Core, Shoulders, Chest", R.drawable.cablesandpulleys),
+            new GymPlan("Chin Up Bar"," Pull yourself up so your chin is above the bar.\n" +
+                    "Muscles Used:\tLegs, Core, Shoulders, Chest", R.drawable.pullupbar),
             new GymPlan("Pec Deck Machine"," Step on set to desired speed", R.drawable.barbells)
 
 

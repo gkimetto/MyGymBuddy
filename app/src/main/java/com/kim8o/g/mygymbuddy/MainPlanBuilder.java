@@ -1,8 +1,11 @@
 package com.kim8o.g.mygymbuddy;
 
 import android.app.Activity;
-import android.os.Bundle;
 import android.app.FragmentTransaction;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+
 
 
 public class MainPlanBuilder extends Activity implements GymPlanBldrListFragment.GymPlanListListener{
@@ -17,22 +20,33 @@ public class MainPlanBuilder extends Activity implements GymPlanBldrListFragment
     }
     @Override
     public void itemClicked(long id){
-        //This is defined in the listener
-        GymPlanDetailFragment details = new GymPlanDetailFragment();
-        //Start the fragment transaction
-        FragmentTransaction ft = getFragmentManager().beginTransaction();
-        details.setGymPlan(id);
-        //Reglace the fragment and add it to the back stack
-        ft.replace(R.id.frag_cont_main_plan_bldr, details);
-        //Add it to the back stack
-        ft.addToBackStack(null);
-        //Get the new and old fragments to transition in and out
-        //See pg 301 for options
+        //Get a reference to the frame layout that contains WorkoutDetailFragment
+        //This will exist if the app is being run on a device with a large screen
+        View fragmentContainer =findViewById(R.id.frag_cont_main_plan_bldr);
+        if (fragmentContainer!=null) {
+            //This is defined in the listener
+            GymPlanDetailFragment details = new GymPlanDetailFragment();
+            //Start the fragment transaction
+            FragmentTransaction ft = getFragmentManager().beginTransaction();
+            details.setGymPlan(id);
+            //Reglace the fragment and add it to the back stack
+            ft.replace(R.id.frag_cont_main_plan_bldr, details);
+            //Add it to the back stack
+            ft.addToBackStack(null);
+            //Get the new and old fragments to transition in and out
+            //See pg 301 for options
 
-        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-        //Commit the transaction
-        ft.commit();
-
+            ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+            //Commit the transaction
+            ft.commit();
+        }
+        else {
+            Intent intent = new Intent(this, DetailActivityPhone.class);
+            //If the frame layout isnt there the app must be running on a device with a smaller screen
+            //Start DetailActivity passing it the ID of the workout
+            intent.putExtra(DetailActivityPhone.EXTRA_WORKOUT_ID, (int) id);
+            startActivity(intent);
+        }
 
     }
 }

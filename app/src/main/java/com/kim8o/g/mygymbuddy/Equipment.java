@@ -32,7 +32,7 @@ public class Equipment extends Activity {
     public void onClickBack(View view){
         //EditText messageView= (EditText)findViewById(R.id.etxt_username);
         //String messageText=messageView.getText().toString();
-        Intent intent = new Intent(this, User.class);
+        Intent intent = new Intent(this, DailyUpdate.class);
         //intent.putExtra(User.EXTRA_MESSAGE,messageText);
         startActivity(intent);
     }

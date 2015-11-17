@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+    <fragment
+        class="com.kim8o.g.mygymbuddy.GymPlanBldrListFragment"
+        android:id="@+id/list_frag"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="match_parent"/>
+
+
+    <FrameLayout
+        android:id="@+id/frag_cont_main_plan_bldr"
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

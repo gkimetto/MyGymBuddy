@@ -14,6 +14,15 @@ public class DailyUpdate extends Activity {
         setContentView(R.layout.activity_daily_update);
 
     }
+//Build a custom workout plan
+
+    public void onClickBuildPlan(View view) {
+
+        Intent intent = new Intent(this, Equipment.class);
+        Toast.makeText(DailyUpdate.this, "Getting ready to build a Custom Fitness Plan" +
+                "...", Toast.LENGTH_SHORT).show();
+        startActivity(intent);
+    }
 
 
     public void onWorkoutAndLog(View view) {
@@ -32,7 +41,7 @@ public class DailyUpdate extends Activity {
     //Record Diet
     public void onClickRecordDiet(View view) {
 
-        Intent intent = new Intent(this, MainPlanBuilder.class);
+        Intent intent = new Intent(this, MainDietBuilder.class);
         Toast.makeText(DailyUpdate.this, "Loading your Diet Profile...", Toast.LENGTH_SHORT).show();
         startActivity(intent);
     }
@@ -48,15 +57,6 @@ public class DailyUpdate extends Activity {
 
         Intent intent = new Intent(this, MainPlanBuilder.class);
         Toast.makeText(DailyUpdate.this, "Loading your progress......", Toast.LENGTH_SHORT).show();
-        startActivity(intent);
-    }
-    //Build a custom workout plan
-
-    public void onClickBuildPlan(View view) {
-
-        Intent intent = new Intent(this, MainPlanBuilder.class);
-        Toast.makeText(DailyUpdate.this, "Getting ready to build a Custom Fitness Plan" +
-                "...", Toast.LENGTH_SHORT).show();
         startActivity(intent);
     }
 

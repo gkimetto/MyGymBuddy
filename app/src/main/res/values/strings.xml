@@ -14,5 +14,8 @@
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_main_plan_builder">MainPlanBuilder</string>
+    <string name="title_activity_detail_activity_phone">DetailActivityPhone</string>
+    <string name="title_activity_diet_plan_detail_fragment">DietPlanDetailFragment</string>
+    <string name="title_activity_main_diet_builder">MainDietBuilder</string>
 
     </resources>

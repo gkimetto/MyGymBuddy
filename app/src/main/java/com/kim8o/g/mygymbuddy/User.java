@@ -35,7 +35,7 @@ public class User extends Activity {
         public void onClickContinue(View view){
             EditText messageView= (EditText)findViewById(R.id.etxt_username);
             String messageText=messageView.getText().toString();
-            Intent intent = new Intent(this, Equipment.class);
+            Intent intent = new Intent(this, DailyUpdate.class);
             intent.putExtra(User.EXTRA_MESSAGE,messageText);
             startActivity(intent);
         }
