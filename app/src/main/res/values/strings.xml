@@ -17,5 +17,10 @@
     <string name="title_activity_detail_activity_phone">DetailActivityPhone</string>
     <string name="title_activity_diet_plan_detail_fragment">DietPlanDetailFragment</string>
     <string name="title_activity_main_diet_builder">MainDietBuilder</string>
+    <string name="title_activity_maps_activity_gym_buddy">Map</string>
+    <string name="title_activity_main_activity_cardio">MainActivityCardio</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="reset">Reset</string>
 
     </resources>

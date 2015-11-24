@@ -1,6 +1,7 @@
 package com.kim8o.g.mygymbuddy;
 
 
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
@@ -27,10 +28,18 @@ public class GymPlanDetailFragment extends Fragment {
             //Set the value of gymPlanId
             gymPlanId=savedInstanceState.getLong("gymPlanId",gymPlanId);
 
+        }else {
+            FragmentTransaction ft = getChildFragmentManager().beginTransaction();
+            GymPlanDataFragment gyPlanDataFragment = new GymPlanDataFragment();
+            ft.replace(R.id.gym_data_container, gyPlanDataFragment);
+            ft.addToBackStack(null);
+            ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+            ft.commit();
         }
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_gym_plan_detail, container, false);
     }
+
     @Override
     public void onStart()
     {

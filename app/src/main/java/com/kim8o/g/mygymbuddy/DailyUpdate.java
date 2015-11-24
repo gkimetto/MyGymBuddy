@@ -34,7 +34,7 @@ public class DailyUpdate extends Activity {
     //Record Daily Cardio section
     public void onClickRecordCardio(View view) {
 
-        Intent intent = new Intent(this, MainPlanBuilder.class);
+        Intent intent = new Intent(this, MainCardioBuilder.class);
         Toast.makeText(DailyUpdate.this, "Loading your Cardio Profile...", Toast.LENGTH_SHORT).show();
         startActivity(intent);
     }
@@ -60,7 +60,13 @@ public class DailyUpdate extends Activity {
         startActivity(intent);
     }
 
-
+    public void onClickQuit(View view){
+        //EditText messageView= (EditText)findViewById(R.id.etxt_username);
+        //String messageText=messageView.getText().toString();
+        Intent intent = new Intent(this, Login.class);
+        //intent.putExtra(User.EXTRA_MESSAGE,messageText);
+        startActivity(intent);
+    }
     /*@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

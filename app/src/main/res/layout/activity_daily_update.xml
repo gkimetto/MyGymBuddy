@@ -22,6 +22,8 @@
         android:scaleType="centerCrop"
         android:src="@drawable/body_weight"
         android:layout_below="@id/img_daily_run"
+        android:onClick="onClickBuildPlan"
+        android:clickable="true"
         />
     <TextView
         android:id="@+id/txtv_fit_plan"
@@ -29,12 +31,8 @@
         android:layout_height="wrap_content"
         android:text="Fitness Plan (Upgrade to Customize)"
         android:layout_below="@id/img_daily_run"
-
         android:layout_alignTop="@id/img_fit_plan"
         android:layout_toRightOf="@id/img_fit_plan"
-
-
-
         android:layout_marginTop="20sp"
         android:textSize="20dp"
         android:layout_marginLeft="100sp"
@@ -49,6 +47,8 @@
         android:scaleType="centerCrop"
         android:src="@drawable/dumbbells2"
         android:layout_below="@id/img_fit_plan"
+        android:onClick="onWorkoutAndLog"
+        android:clickable="true"
         />
 
 
@@ -74,6 +74,8 @@
         android:scaleType="centerCrop"
         android:src="@drawable/trot"
         android:layout_below="@id/img_rec_workout"
+        android:onClick="onClickRecordCardio"
+        android:clickable="true"
         />
     <TextView
         android:id="@+id/txtv_rec_cardio"
@@ -99,6 +101,8 @@
         android:layout_below="@id/img_rec_cardio"
         android:layout_marginTop="20sp"
         android:textSize="20dp"
+        android:onClick="onClickRecordDiet"
+        android:clickable="true"
         />
     <TextView
         android:id="@+id/txtv_rec_diet"
@@ -121,6 +125,8 @@
         android:scaleType="centerCrop"
         android:src="@drawable/scale"
         android:layout_below="@id/img_rec_diet"
+        android:onClick="onClickRecordWeight"
+        android:clickable="true"
         />
     <TextView
         android:id="@+id/txtv_rec_weight"
@@ -143,6 +149,8 @@
         android:scaleType="centerCrop"
         android:src="@drawable/heart"
         android:layout_below="@id/img_rec_weight"
+        android:onClick="onClickViewProgress"
+        android:clickable="true"
         />
     <TextView
         android:id="@+id/txtv_progress"
@@ -175,5 +183,5 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:text="Quit"
-        android:onClick="onClickLogout"/>
+        android:onClick="onClickQuit"/>
 </RelativeLayout>
