@@ -16,6 +16,8 @@ public class DietPlan {
     //gymplans is an array of DietPlans
 
     public static final DietPlan[] dietplans ={
+
+
             new DietPlan("Atkins Diet"," Cook raw chicken\n Add sauce\n Calorie 500 cals \n Recipe: https://vimeo.com/16764637", R.drawable.chicken),
             new DietPlan("Weight watchers"," Lie on your back \n Secure your feet \n Do full range ab crunches", R.drawable.fruit),
             new DietPlan("Paleo","Step on Squat Station\n Start squatting while controlling breathing", R.drawable.fruit2),

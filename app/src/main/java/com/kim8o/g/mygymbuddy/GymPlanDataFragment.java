@@ -97,6 +97,7 @@ public class GymPlanDataFragment extends Fragment implements View.OnClickListene
 
         public void onClickAddCount(View view){
             int intWeightCount=0;
+            running = false;
             intWeightCount=(R.id.txt_count +1);
 
         }

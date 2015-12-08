@@ -13,7 +13,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class MapsActivityGymBuddy extends FragmentActivity implements OnMapReadyCallback{
 
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.
-    static final LatLng StartCardioPoint = new LatLng(21 , 57);
+    static final LatLng StartCardioPoint = new LatLng(42.349970 , -71.107953);
     private GoogleMap googleMap;
 
     @Override
@@ -27,8 +27,9 @@ public class MapsActivityGymBuddy extends FragmentActivity implements OnMapReady
                         findFragmentById(R.id.map)).getMap();
             }
             googleMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
-            Marker TP = googleMap.addMarker(new MarkerOptions().
-                    position(StartCardioPoint).title("StartCardioPoint"));
+            Marker TP = googleMap.addMarker(new MarkerOptions().position(StartCardioPoint).title("Start Cardio Point"));
+
+            //TP.setPosition(StartCardioPoint);
         }
         catch (Exception e) {
             e.printStackTrace();

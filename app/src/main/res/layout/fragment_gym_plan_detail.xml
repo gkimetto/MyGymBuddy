@@ -21,10 +21,20 @@
 
     <ImageView
         android:id="@+id/imgGymMachine"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
 
         />
+
+    <Button
+        android:id="@+id/btnStartWorkout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:color="#3ec95c"
+        android:layout_alignParentLeft="true"
+        android:text="Start Workout"
+        android:onClick="onClickStartWorkout"/>
     <FrameLayout
         android:id="@+id/gym_data_container"
         android:layout_width="match_parent"

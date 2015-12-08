@@ -8,6 +8,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.ImageView;
+import android.widget.Toast;
+
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.model.CameraPosition;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
+
 
 import org.w3c.dom.Text;
 
@@ -22,14 +34,35 @@ import org.w3c.dom.Text;
  */
 public class CardioPlanDetailFragment extends Fragment {
 
-
+//public class CardioPlanDetailFragment extends FragmentActivity implements OnMapReadyCallback{
     /**
      * A simple {@link Fragment} subclass.
      */
 
         private long cardioPlanId;
+    private GoogleMap googleMap;
+    // latitude and longitude
+    double latitude =42.3369558 ;
+    double longitude = -71.16921000000002;
+    static final LatLng StartCardioPoint = new LatLng(42.349970 , -71.107953);
 
+    //GoogleMap mMap  = MapFragment getFragmentManager().findFragmentById(R.id.).getMap();
+     //       GoogleMap mMap=getMap();
 
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        //return R.layout.fragment_cardio_plan_detail;
+        // create marker
+        try {
+            // Loading map
+            initializeMap();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
@@ -38,11 +71,66 @@ public class CardioPlanDetailFragment extends Fragment {
                 //Set the value of cardioplanId
                 cardioPlanId=savedInstanceState.getLong("cardioPlanId",cardioPlanId);
 
+
             }
             // Inflate the layout for this fragment
+
             return inflater.inflate(R.layout.fragment_cardio_plan_detail, container, false);
+
+
+
         }
-        @Override
+    /**
+     * function to load map. If map is not created it will create it for you
+     * */
+    private void initializeMap() {
+        if (googleMap == null) {
+            googleMap = ((MapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
+            googleMap.getUiSettings().setZoomControlsEnabled(true);
+            ////////
+
+            googleMap.setOnMapLoadedCallback(new GoogleMap.OnMapLoadedCallback() {
+                @Override
+                public void onMapLoaded() {
+
+//Add markers here
+                   // googleMap.moveCamera(CameraUpdateFactory.newLatLngBounds(bounds, 15));
+
+                }
+            });
+
+            ///////
+
+            // check if map is created successfully or not
+            if (googleMap == null) {
+              //  Toast.makeText(CardioPlanDetailFragment.this, "Sorry! unable to create maps", Toast.LENGTH_SHORT).show();
+            }
+            else{
+               // create marker
+                MarkerOptions marker = new MarkerOptions().position(new LatLng(latitude, longitude)).title("Hello Maps ");
+
+// adding marker
+                googleMap.addMarker(marker);
+                // latitude and longitude
+                double latitude = 17.385044;
+                double longitude = 78.486671;
+
+// create marker
+                MarkerOptions marker2 = new MarkerOptions().position(new LatLng(latitude, longitude)).title("Hello Maps");
+                googleMap.setMyLocationEnabled(true);
+                CameraPosition cameraPosition = new CameraPosition.Builder().target(new LatLng(17.385044, 78.486671)).zoom(12).build();
+                googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+
+// Changing marker icon
+                //marker.icon(BitmapDescriptorFactory.fromResource(R.drawable.my_marker_icon)));
+
+// adding marker
+                googleMap.addMarker(marker);
+            }
+        }
+    }
+
+    @Override
         public void onStart()
         {
             super.onStart();
@@ -50,6 +138,8 @@ public class CardioPlanDetailFragment extends Fragment {
 
 
             if (view!=null){
+
+
                 TextView cardioName =(TextView) view.findViewById(R.id.txtCardioName);
                 CardioPlan cardioplan =CardioPlan.cardioplans[(int) cardioPlanId];
 
@@ -70,6 +160,7 @@ public class CardioPlanDetailFragment extends Fragment {
 
                 TextView cardioDistance =(TextView) view.findViewById(R.id.txtCardioDistance);
                 //CardioPlan cardioplan =CardioPlan.cardioplans[(int) cardioPlanId];
+
 
 
 

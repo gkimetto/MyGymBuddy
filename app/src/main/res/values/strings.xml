@@ -22,5 +22,8 @@
     <string name="start">Start</string>
     <string name="stop">Stop</string>
     <string name="reset">Reset</string>
+    <string name="btn_skip_recipe">Try Another Recipe</string>
+    <string name="btn_add_meal">Add Diet Calories</string>
+
 
     </resources>

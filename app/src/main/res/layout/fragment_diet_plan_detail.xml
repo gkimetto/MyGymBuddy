@@ -19,8 +19,22 @@
 
     <ImageView
         android:id="@+id/imgDiet"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        />
+    <Button
+        android:id="@+id/btnSkipDietRecipe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:onClick="skipRecipe"
+        android:text="@string/btn_skip_recipe"/>
+    <Button
+        android:id="@+id/addDietRecipe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="addDietCalories"
+        android:layout_toRightOf="@id/btnSkipDietRecipe"
+        android:text="@string/btn_add_meal"
+        android:layout_alignTop="@id/btnSkipDietRecipe"
         />
 </LinearLayout>

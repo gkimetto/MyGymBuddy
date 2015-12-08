@@ -2,6 +2,7 @@ package com.kim8o.g.mygymbuddy;
 
 
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -28,18 +30,24 @@ public class GymPlanDetailFragment extends Fragment {
             //Set the value of gymPlanId
             gymPlanId=savedInstanceState.getLong("gymPlanId",gymPlanId);
 
-        }else {
-            FragmentTransaction ft = getChildFragmentManager().beginTransaction();
-            GymPlanDataFragment gyPlanDataFragment = new GymPlanDataFragment();
-            ft.replace(R.id.gym_data_container, gyPlanDataFragment);
-            ft.addToBackStack(null);
-            ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-            ft.commit();
         }
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_gym_plan_detail, container, false);
     }
 
+
+   /* public View onClickStartWorkout (View view){
+
+        FragmentTransaction ft = getChildFragmentManager().beginTransaction();
+        GymPlanDataFragment gyPlanDataFragment = new GymPlanDataFragment();
+        ft.replace(R.id.gym_data_container, gyPlanDataFragment);
+        ft.addToBackStack(null);
+        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+        ft.commit();
+
+        //Toast.makeText(GymPlanDetailFragment.this, "Loading your Weight Profile...", Toast.LENGTH_SHORT).show();
+        return inflater.inflate(R.layout.fragment_gym_plan_detail, container, false);
+    }*/
     @Override
     public void onStart()
     {
@@ -63,6 +71,8 @@ public class GymPlanDetailFragment extends Fragment {
     @Override
     //Save the value of the gymPlanID in the savedInstanceState Bundle before the fragment gets destroyed.
     //We will retrieve it in the onCreateView() method
+
+
 
     public void onSaveInstanceState(Bundle savedInstanceState){
         savedInstanceState.putLong("gymPlanId", gymPlanId);

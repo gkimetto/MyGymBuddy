@@ -40,7 +40,7 @@ public class MainDietBuilder extends Activity implements DietPlanListFragment.Di
             }
             else {
                 Intent intent = new Intent(this, DetailActivityPhone.class);
-                //If the frame layout isnt there the app must be running on a device with a smaller screen
+                //If the frame layout isn't there the app must be running on a device with a smaller screen
                 //Start DetailActivity passing it the ID of the workout
                 intent.putExtra(DetailActivityPhone.EXTRA_WORKOUT_ID, (int) id);
                 startActivity(intent);
